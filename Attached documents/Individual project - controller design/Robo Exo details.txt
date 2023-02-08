@@ -1,0 +1,12 @@
+I am proud of the project I recently undertook at Assistive and Wearable (AWEAR) Lab at the University of Buffalo in the Fall of 2022. 
+
+The project involved designing a controller for a robotic exoskeleton to improve the gait pattern of people suffering from Cerebral palsy. The exoskeleton was operated using a servo motor mounted on a frame that used steel cables to adjust the tension in the exoskeleton prototype. I had to design a mounting bracket that would allow the motor to move in X, Y, and Z directions. This was done using aluminum frames and glides to keep the weight of the frame at a minimum to reduce the sagging of the motor mount. This allowed the motor to be adjustable for any height and width desired (for testing on people with different physiques).
+
+The next part was to design the controller that will adjust the tension in the cable and provide an output motion to the exoskeleton. For tension sensing, a Load cell (100 Lb) was used that gauged the input tension in the exoskeleton and through an amplifier, sent the serial input to the computer through NI-myRio-1900. This input from the amplifier was fed to the PID controller, which returned the output as the adjusted input voltage to the servo motor that adjusted the tension in the system. 
+To detect the heel strike for every step, Force Sensing Resistors (FSR) were used. These FSR were used tThis o determine the start and end of each step that provided the input set point for the PID controller. 
+
+During the testing, an input tension in the range of 15-20 Newtons (sine input) was used as the setpoint for PID. With some tuning to determine the PID gain values, the controller was able to return a steady output tension to the exoskeleton with less than  5% error. This allowed the exoskeleton to improve the gait by reducing the amount of force required to lift the foot.
+
+There is always room for improvement in any project and this was no exception. 
+1) The 3D-printed parts for the prototype resulted in slight friction with the cable and added noise in the tension input. Modifications in the design of these parts would be a primary change.
+2) Design modifications in the exoskeleton prototype can be achieved to improve the force output.
